@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <style>
+        body {
+            background-image: url("/static/other_background.jpg");
+            background-size: cover;
+        }
+        #content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        #content div {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        #content div img {
+            width: 900px;
+            height: auto;
+        }
+        #content div p {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        #content div p.cluster {
+            font-weight: bold;
+        }
+    </style>
+
+    <div id="content">
+        <div>
+            <img src="{{ url_for('static', filename='fuel.all.png') }}" alt="Fuel Image">
+        </div>
+        <div>
+            <img src="/static/1.png" alt="Picture 1">
+        </div>
+        <div>
+            <img src="/static/2.png" alt="Picture 2">
+        </div>
+        <div>
+            <img src="/static/3.png" alt="Picture 3">
+        </div>
+        <div>
+            <img src="/static/4.png" alt="Picture 4">
+        </div>
+        <div>
+            <img src="/static/5.png" alt="Picture 5">
+        </div>
+        <div>
+            <img src="/static/6.png" alt="Picture 6">
+        </div>
+        <div>
+            <img src="/static/7.png" alt="Picture 7">
+        </div>
+        <div>
+            <p class="cluster">About Cluster Number 0:</p>
+            <p>
+                Age is medium to high<br>
+                Power in this group is mostly low to medium, but in a smaller part, it goes towards high<br>
+                Fuel type is mostly gasoline and diesel, but some CNG as well<br>
+                Gearbox is mostly manual with a smaller share of automatic<br>
+                Mileage is scattered around the central part with a tendency towards high<br>
+                Fuel consumption is evenly distributed as well as CO2 emissions<br>
+                Price is definitely in the bottom half<br>
+            </p>
+        </div>
+        <div>
+            <p class="cluster">About Cluster Number 1:</p>
+            <p>
+                Age of the cars is mostly new with a tendency to medium<br>
+                Power is low to medium<br>
+                Fuel type apart from diesel and gasoline is hybrid gasoline as well<br>
+                Gearbox is mostly manual with a smaller share of automatic<br>
+                Mileage is low to medium<br>
+                Fuel consumption is scattered around the central part as well as CO2 emissions<br>
+                Price is low to medium<br>
+            </p>
+        </div>
+        <div>
+            <p class="cluster">About Cluster Number 2:</p>
+            <p>
+                Age of the cars is mostly new with a tendency to medium<br>
+                Power is definitely high<br>
+                Fuel type is mostly gasoline<br>
+                Gearbox is mostly automatic, but there are manuals as well<br>
+                Mileage is distributed from low to medium<br>
+                Fuel consumption is high as well as CO2 emissions<br>
+                Price starts from medium, but high is more prevalent<br>
+            </p>
+        </div>
+        <div>
+            <p class="cluster">About Cluster Number 3:</p>
+            <p>
+                Age of the cars is mostly new with a tendency to medium<br>
+                Power is grouped in the central part of the distribution with a tendency towards high<br>
+                Fuel type apart from diesel and gasoline is hybrid gasoline as well<br>
+                Gearbox is automatic<br>
+                Mileage is low<br>
+                Fuel consumption is low<br>
+                CO2 emissions start at low but have a tendency towards medium<br>
+                Price is high<br>
+            </p>
+        </div>
+        <div>
+            <p class="cluster">About Cluster Number 4:</p>
+            <p>
+                Age is low, it's a new car, few years old at most<br>
+                Power is distributed from low with a strong tendency to the medium<br>
+                Fuel type is gasoline and LPG<br>
+                Gearbox is automatic<br>
+                Mileage is very low<br>
+                Fuel consumption starts from medium but is distributed mostly in the high area<br>
+                CO2 emissions are mostly grouped at medium but have a tendency towards high<br>
+                Price is low to medium<br>
+            </p>
+        </div>
+        <div>
+            <p>The price of the car in euros and its power are positively correlated in all clusters.</p>
+        </div>
+    </div>
+{% endblock %}
+

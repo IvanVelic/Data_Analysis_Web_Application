@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>hey.car Advertisement Analysis</title>
+    <!-- Add any necessary CSS or stylesheets -->
+    <style>
+        body {
+            background-image: url("/static/background.jpg");
+            background-size: cover;
+        }
+        #navbar {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        #navbar ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        #navbar ul li a {
+            text-decoration: none;
+            padding: 15px 30px;
+            background-color: #ccc;
+            color: #000;
+            border-radius: 50px;
+            border: 1px solid #999;
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            font-size: 24px;
+        }
+        #navbar ul li a.active {
+            background-color: #aaa;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+        }
+        #content {
+            margin-top: 50px;
+            text-align: center;
+        }
+        #content h2 {
+            font-size: 72px;
+        }
+        #content p {
+            font-size: 36px;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <ul>
+            <li><a href="/" {% if active == 'home' %}class="active"{% endif %}>Home</a></li>
+            <li><a href="/all" {% if active == 'all' %}class="active"{% endif %}>All</a></li>
+            <li><a href="/audi" {% if active == 'audi' %}class="active"{% endif %}>Audi</a></li>
+            <li><a href="/ford" {% if active == 'ford' %}class="active"{% endif %}>Ford</a></li>
+            <li><a href="/mercedes" {% if active == 'mercedes' %}class="active"{% endif %}>Mercedes</a></li>
+            <li><a href="/opel" {% if active == 'opel' %}class="active"{% endif %}>Opel</a></li>
+            <li><a href="/renault" {% if active == 'renault' %}class="active"{% endif %}>Renault</a></li>
+            <li><a href="/seat" {% if active == 'seat' %}class="active"{% endif %}>Seat</a></li>
+            <li><a href="/skoda" {% if active == 'skoda' %}class="active"{% endif %}>Skoda</a></li>
+            <li><a href="/volkswagen" {% if active == 'volkswagen' %}class="active"{% endif %}>Volkswagen</a></li>
+        </ul>
+    </div>
+
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
+

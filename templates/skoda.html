@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <style>
+        body {
+            background-image: url("/static/other_background.jpg");
+            background-size: cover;
+        }
+        #content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        #content div {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        #content div img {
+            width: 900px;
+            height: auto;
+        }
+        #content div p {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        #content div p.cluster {
+            font-weight: bold;
+        }
+    </style>
+
+    <div id="content">
+        <div>
+            <img src="{{ url_for('static', filename='fuel.skoda.png') }}" alt="Fuel Image">
+        </div>
+        <div>
+            <img src="/static/1skoda.png" alt="Picture 1">
+        </div>
+        <div>
+            <img src="/static/2skoda.png" alt="Picture 2">
+        </div>
+        <div>
+            <img src="/static/3skoda.png" alt="Picture 3">
+        </div>
+        <div>
+            <img src="/static/4skoda.png" alt="Picture 4">
+        </div>
+        <div>
+            <img src="/static/5skoda.png" alt="Picture 5">
+        </div>
+        <div>
+            <img src="/static/6skoda.png" alt="Picture 6">
+        </div>
+        <div>
+            <img src="/static/7skoda.png" alt="Picture 7">
+        </div>
+        <div>
+            <p class="cluster">About Cluster Number 0:</p>
+            <p>
+                Age is low to medium<br>
+                Power is in the lower part<br>
+                Fuel type is mostly gasoline<br>
+                Gearbox is both automatic and manual<br>
+                Mileage is low<br>
+                Fuel consumption is medium<br>
+                CO2 emissions are in the central part<br>
+                Price is low to medium<br>
+            </p>
+        </div>
+        <div>
+            <p class="cluster">About Cluster Number 1:</p>
+            <p>
+                Age is low to medium<br>
+                Power is medium<br>
+                Fuel type is diesel<br>
+                Gearbox is automatic<br>
+                Mileage is evenly distributed<br>
+                Fuel consumption as well as CO2 emissions is low<br>
+                Price is evenly distributed<br>
+            </p>
+        </div>
+        <div>
+            <p class="cluster">About Cluster Number 2:</p>
+            <p>
+                Age is low<br>
+                Power is from medium to very high<br>
+                Fuel type is diesel and gasoline<br>
+                Gearbox is manual and automatic<br>
+                Mileage is low<br>
+                Fuel consumption as well as CO2 emissions are very high<br>
+                Price is very high<br>
+            </p>
+        </div>
+        <div>
+            <p class="cluster">About Cluster Number 3:</p>
+            <p>
+                Age of the cars is higher<br>
+                Power is low<br>
+                Fuel type is gasoline<br>
+                Gearbox is manual<br>
+                Mileage is from low to medium<br>
+                Fuel consumption is low as well as CO2 emissions<br>
+                Price is low<br>
+            </p>
+        </div>
+        <div>
+            <p class="cluster">About Cluster Number 4:</p>
+            <p>
+                Age is mostly medium to high<br>
+                Power is medium with a tendency to high<br>
+                Fuel type is diesel and gasoline<br>
+                Gearbox is automatic and manual<br>
+                Mileage is distributed from medium to high<br>
+                Fuel consumption is distributed from medium to high as well as CO2 emissions<br>
+                Price is low to mostly medium<br>
+            </p>
+        </div>
+        <div>
+            <p>The price of the car in euros and its power are positively correlated in all clusters.</p>
+        </div>
+    </div>
+{% endblock %}
+
